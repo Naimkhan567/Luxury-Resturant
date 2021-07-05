@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Resturant</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <section class="header">
+    <nav class="navbar navbar-expand-lg navbar-light p-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./img/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item px-2">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">MENU</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">RESERVATION</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">RECIPE</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">PAGES</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+            <li class="nav-item dropdown px-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21"
+                  height="17" viewBox="0 0 21 17">
+                  <image id="icon_cart" width="21" height="17"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAARCAYAAAAyhueAAAABIElEQVQ4jaWUvVEDMRCFP35yTAW4A44OrgNcAnTgkPBKICWDDhySYSrAziCCECIuJDPzZt56NLKwT/jN7EiaXe293XtagCmwSmzCnjgCfoAv4Bm4AM6Bu33SHmTnGXAJnAKtP1CLhzw+WjEptGWojY+zpHOvYtkBiwqWqrIHPkpOOV4qSx67ilsdDgsBYtsAo4qkoZj5tqS4BUPRZnc30KSlDES/LWGgpq+tSXS7Au//IaUmLueSCky9xg8oSWvkx7F0q9YxfyXtLZMTn9+B68QvVk/en+0qO2W6sqBnbA6ahT/cef1OL5ckFaUJ6q1MEPOA9mKvpHpBgzQdsgqLdgTUw9SvatbQ6Cvh06NQ0+oNuAJek8BHTziZptKNRygAv474W2yRIPcJAAAAAElFTkSuQmCC" />
+                </svg>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+              </ul>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link book" href="#">
+                <div>
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21"
+                    height="17" viewBox="0 0 21 17">
+                    <image id="icon_plate" width="21" height="17"
+                      xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAARCAYAAAAyhueAAAABMElEQVQ4ja3UOUucURTG8d+IuPcqNhZuaMAqBokL+AnGDVw+icuXEEyTMm2QJKUkRVrt7BQLrcRCxXEBl7hwwxkYBsYZh3ng3gNn+b/nvedylVEnDpHDSdgDdJQrfEtdeClaz+GvWnXox3qAk+0Lf0llSgSaMIwsPuIT2nCDHeziJ/ZwX0nHH7BV8MtHAfkb9rgg9h1D5YCzeIqCH1hCe1FOGtIivkXeA6ZLAWciKRdF5dSDOZxHXbY4fxDXOMNoBcAGfMEaJnCKKwzkE1rwJ762XAEwr944olXMR/02mlN8LBy/3gHMK53vbyzga3A+p9gmHgNejUYwFTZxNuoxjouY8uQ7oamzf3EDunGZeJkI1FQJuoLGGkLvat3kf6VO0/Raa8i8TVt6H4uft+oX+68S8FqmcF49QwAAAABJRU5ErkJggg==" />
+                  </svg> <span class="ps-2">BOOK YOUR TABLE</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="slide-show">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/slide1.jpg" class="d-block" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Teast your fav dish</h5>
+              <p>form <span>luxury restaurent</span></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/slide2.jpg" class="d-block" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Teast your fav dish</h5>
+              <p>form <span>luxury restaurent</span></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/slide3.jpg" class="d-block" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Teast your fav dish</h5>
+              <p>form <span>luxury restaurent</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-footer">
+      <div class="container d-flex">
+        <div class="food-menu-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="204" height="237"
+            viewBox="0 0 204 237">
+            <image id="::explore_foodmenu" data-name="::explore foodmenu" width="204" height="237"
+              xlink:href="data:img/png;base64,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" />
+          </svg>
+        </div>
+        <div class="phone-review-container d-flex ms-auto">
+          <div class="read-review d-flex m-auto pe-3">
+            <div class="review-icon m-auto"><svg xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="33" viewBox="0 0 44 33">
+                <image id="icon_reviews" width="44" height="33"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAhCAYAAACiGknfAAACEklEQVRYhe2YO0skQRSFP0XUxbesshiKKAgG4h9QFFMNFsENjETdQFjQUEPxL4w/QMTYQGWDjURTExNBWUQR3cBZfOM6Uu6ZoWybceyuGh3wQNFV1V33nrpVp+tRhDuUA7UO7RlcAUmXBkuBWeA3cA+kPKQjYE4BIU6Ei4FVoF/lc+DCTRwyqAAqVfhl+YqEUUXzBOh1TNRGr3wYX+NxDG3IyLBzis8xLF8bcYzsAcfWkPlElQhfhs3hGuCTY+cu1J6yC+VS4pEnpT9Te0TCKRPhEuAn0G1F42/MaARRKcVjqf0uAuFHTKjwBxhUB1zDBKYPOI2h9vRIsanMVw9Eg/gWQ+0ZwlfKVHul+h/VabVHaJuZw+m54XJf8ZLjKP4e2xW75+MXH4R944OwbxQK4QY9k4VCeETPLewVJE+w/dWHuDR1X5RagGngRm0G3pKw2bVdA13Wu07Vhe32EkED+SZcpuc+UKdN+q61ETPpAFgDhsIM5GNpLgoEaF75FWBJ+bmXjCT1oes7hTA0yteZyqYDi1YnlnMJ3Lo+/p4HwlPytWbVlWpTv5nraWRQRm6BGaAV+JzlcFmm969JzSL7RO0WahX9nLEQokpzOmgPGDBGt2Oe7RKvIZYNQxqqAyn0Xsf4NrVpAnYCKs41hardNSZE+hDosX45kz6dxsVY4JLvx3smm4a5Q/unJbJg0PEuiAIPFmzYZY/sKSUAAAAASUVORK5CYII=" />
+              </svg></div>
+            <div class="read">READ <p>REVIEWS</p>
+            </div>
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="45"
+                viewBox="0 0 45 45">
+                <image id="arrow" width="45" height="45"
+                  xlink:href="data:img/png;base64,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" />
+              </svg>
+            </div>
+          </div>
+          <div class="delivery d-flex m-auto ps-5">
+            <div class="phone-icon m-auto">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="37"
+                viewBox="0 0 37 37">
+                <image id="icon_phone" width="37" height="37"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAD+ElEQVRYhb2YWahWVRTHf/c65Kzp9aqU6VVTcqJBUdNSCi44hD0kPqgllCSZImqP+tJAKg7XUsyHUumhsKBUcLiEFt4ckEIsSys1NZVUVNQspytL/ieWh+8M3+fGPxzOx9prrb3O2mvaXxlh8DCwCGgLnAL+BPYBh4ADwI1A+xSFgUB9wvMNMBPomFdhKE+VA08CHYCGQFfgKaBaNMNJYCUwH7hWyiaNAhlbAYwBtjov7pVni0I7YBOwDnggkHGG0TLIDLsMvJJX0M79R/dVXwNNcspaKLTI4GkMLHb6p2UpNQ/VifkTYIt+fwk0yJDtDPwMnAeOAxuB15WVhTDdGZbosabKEmP6TLQ2wB7R1ukrk9AFOAj8F8tAKwULgEcKyE0Rzz9KkrtgXljrvOKDvMLFQW3G8TQDegJPAJOAVcC/kv1LAR/H+1r/KR4mz2phW8JmLYHvxLMZaJViWBy9gI+c52YU4NmptXmeOF/E8SnKLQG+F9+GhOA3D1cmyE91hsX3eVr0s66m3fl6Iw7K+OpKl5nfAg+6tYeAHcBhYD3wVgEDX5XsGaAqtvaV1mZFhF0iPJ5hFAr+HeKvc62jo0uK6DkKjIvJ12jt8xh9mOi7lXT/e2pwDqNQYkRxsNUlRmOVgAHAp864CU7WEud0ASeY7K+i9y9XfUH9Kg8qXaW/oV6H+tkJZetEVxhr3HFZ3KzR78lur2vqIqhnMlYWriEbj2osqVdGVmRIrBJvjaONEO2PGO9Ez9teM9D1hCIXoaEqdVSzmuX4iO7ALSVAW9EsQc5Jj6/4kbGbI0JUxFakbNBLPBeKOOrmzrP9HP2gaM842hDR9peLsFR9a2pKFjbV+5wyKw+s7fwiviuO/7LeVx3tjN53dY03XVoWGv7M7b/l7e4OnRW8XmcfYFSspZXpCAfEFWzTpnMTNnjJpfqcIgy7J1QpbW3TkQmKJjnD3k7ZrEcxg1wWohJxKSW+XlDA1yse43jMZdjyUIbNk8LfgU4JPM8BF8W3WtOEoS9wTPRTei8OZdhK1+NaJvAMdhsf0FwWDXoWf91Uo+IFtGSUawo1hbtSxpJu6gZX3ATh47Grq0tBjrLMGbY3ZeZGI3GPhOtZF9WrYEdp7eULKfxBG5eC3sAR6VkSyrCPpdBuusNL1FOlRhw0Kxe6GvVGiTosBPZLx7JQhs10hn2gplssOrmsfSeUYSPdBFlXqF9lYCjwt+RnhzIKlYJaKb6py0IeVGs6MLl3QxoUwWbr99xx1urKVAg227+Ws28GwSj9axdt+CHwIvC8PPOym1rrFZf3Ba3dFSrpsVZkDT8Vof7J87Cx1zxkf1rYfdBuKtb/rP1s1/SQDOA2WT4tNE0LWNwAAAAASUVORK5CYII=" />
+              </svg>
+            </div>
+            <div class="text">
+              <p>CALL US NOW FOR</p>
+              <h4>HOME DELIVERY</h4>
+            </div>
+            <div class="number">
+              1-008 005 006
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-resturant">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 my-auto">
+          <h1>About Resturant</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem distinctio nihil fugit alias voluptate
+            recusandae optio, ullam corporis dolore magni pariatur perspiciatis iste dolorum. Consequuntur aut laborum
+            assumenda cupiditate similique!</p>
+          <div class="about-foot d-flex">
+            <a href="#" class="me-3 py-1 px-3">Read More</a>
+            <img src="./img/about-5.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-6 second">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="./img/about-1.jpg" alt="" class="img-fluid">
+              <img src="./img/about-2.jpg" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 second-col">
+              <img src="./img/about-3.png" alt="" class="img-fluid">
+              <img src="./img/about-4.jpeg" alt="" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="today-special">
+    <div class="container">
+      <h1 class="text-center head">Today Special</h1>
+      <div id="carouselCaptions" class="carousel slide pb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="./img/today-2.jpg" alt="" class="img-fluid">
+                <div class="px-3 py-5">
+                  <h1>Food Name One</h1>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, blanditiis rem corporis earum
+                    ad delectus exercitationem hic repudiandae accusamus officiis. Incidunt nihil amet rem maiores vel
+                    sint perferendis voluptatum quo.</p>
+                  <div class="contact-price d-flex">
+                    <div class="hd">HOME <p>delivery</p>
+                    </div>
+                    <p class="number">1-008 005 006</p>
+                    <p class="cp"><span class="currency">$</span>
+                      <span class="price">300</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 ms-5">
+                <img src="./img/today-3.jpg" alt="" class="img-fluid">
+                <div class="px-3 py-5">
+                  <h1>Food Name Two</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque tenetur laboriosam assumenda magni
+                    iure, et odio? Facilis similique quis nesciunt cupiditate veritatis sed, atque aut, optio sequi
+                    praesentium quaerat et.</p>
+                  <div class="contact-price d-flex">
+                    <div class="hd">HOME <p>delivery</p>
+                    </div>
+                    <p class="number">1-008 005 006</p>
+                    <p class="cp"><span class="currency">$</span>
+                      <span class="price">300</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="./img/today-2.jpg" alt="" class="img-fluid">
+                <div class="px-3 py-5">
+                  <h1>Food Name Three</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sequi vero. Dicta, doloribus non
+                    quaerat corrupti ipsa neque! Quibusdam eveniet porro nemo sequi aspernatur error quam pariatur harum
+                    eos ipsa?</p>
+                  <div class="contact-price d-flex">
+                    <div class="hd">HOME <p>delivery</p>
+                    </div>
+                    <p class="number">1-008 005 006</p>
+                    <p class="cp"><span class="currency">$</span>
+                      <span class="price">300</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 ms-5">
+                <img src="./img/today-3.jpg" alt="" class="img-fluid">
+                <div class="px-3 py-5">
+                  <h1>Food Name Four</h1>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas perferendis natus molestias dolores
+                    praesentium. Numquam iure doloribus corporis repellendus provident, omnis eius suscipit commodi iste
+                    exercitationem neque in ad ex?</p>
+                  <div class="contact-price d-flex">
+                    <div class="hd">HOME <p>delivery</p>
+                    </div>
+                    <p class="number">1-008 005 006</p>
+                    <p class="cp"><span class="currency">$</span>
+                      <span class="price">300</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="./img/today-2.jpg" alt="" class="img-fluid">
+                <div class="px-3 py-5">
+                  <h1>Food Name Five</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut debitis alias distinctio, eveniet ea
+                    minus obcaecati, neque, autem sequi omnis laudantium tenetur placeat velit voluptas assumenda ab
+                    nostrum ipsum totam.</p>
+                  <div class="contact-price d-flex">
+                    <div class="hd">HOME <p>delivery</p>
+                    </div>
+                    <p class="number">1-008 005 006</p>
+                    <p class="cp"><span class="currency">$</span>
+                      <span class="price">300</span></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 ms-5">
+                <img src="./img/today-3.jpg" alt="" class="img-fluid">
+                <div class="px-3 py-5">
+                  <h1>Food Name Six</h1>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque tenetur laboriosam assumenda magni
+                    iure, et odio? Facilis similique quis nesciunt cupiditate veritatis sed, atque aut, optio sequi
+                    praesentium quaerat et.</p>
+                  <div class="contact-price d-flex">
+                    <div class="hd">HOME <p>delivery</p>
+                    </div>
+                    <p class="number">1-008 005 006</p>
+                    <p class="cp"><span class="currency">$</span>
+                      <span class="price">300</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
